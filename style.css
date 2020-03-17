@@ -1,0 +1,23 @@
+#char1 {
+    width: 5%;
+    position: absolute;
+    left: 94%;
+    top: 40%;
+}
+
+#letter {
+    width: 200px;
+    position: absolute;
+    left: 5%;
+    top: 40%;
+}
+
+body {
+    background-color: paleturquoise;
+}
+
+h1 {
+    position: absolute;
+    left: 40%;
+    font-size: 150px;
+}
