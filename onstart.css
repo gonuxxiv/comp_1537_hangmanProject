@@ -1,6 +1,6 @@
 body {
     background-image: url(Images/background.png);
-    background-repeat: repeat
+    background-size: cover;
 }
 
 #alphabet {
@@ -119,4 +119,8 @@ body {
 
 #quit {
   animation: jello 10s infinite;
+}
+
+#quit:hover {
+  animation: jello 1s infinite;
 }

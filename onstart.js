@@ -18,10 +18,9 @@ function randomAlphabet () {
 
 function image (result) {
     let folder = "Images/";
-    let fileName = result.toString();
     let fileType = ".png";
 
-    let imageName = folder + fileName + fileType
+    let imageName = folder + result + fileType
     addImage(imageName)
 } 
 
