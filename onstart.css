@@ -7,6 +7,7 @@ body {
     width: 3%;
     min-width: 40px;
     max-width: 80px;
+    height: auto;
     max-height: 80px;
 }
 
@@ -15,47 +16,56 @@ body {
   min-width: 100px;
   max-width: 200px;
   position: absolute;
-    right: 1%;
+    right: 5%;
     bottom: 1%;
+}
+
+#score {
+  width: 8%;
+  min-width: 60px;
+  max-width: 200px;
+  position: absolute;
+    right: 5%;
+    top: 3%;
 }
 
 #baseOne {
     width: 5%;
-    min-width: 80px;
+    min-width: 40px;
     max-width: 150px;
     position: absolute;
-    transform: translate(-85%, -10%);
-    left: 85%;
+    transform: translate(-75%, -10%);
+    left: 75%;
     top: 10%;
 }
 
 #baseTwo {
     width: 5%;
-    min-width: 80px;
+    min-width: 40px;
     max-width: 150px;
     position: absolute;
-    transform: translate(-85%, -32%);
-    left: 85%;
+    transform: translate(-75%, -32%);
+    left: 75%;
     top: 32%;
 }
 
 #baseThree {
     width: 5%;
-    min-width: 80px;
+    min-width: 40px;
     max-width: 150px;
     position: absolute;
-    transform: translate(-85%, -54%);
-    left: 85%;
+    transform: translate(-75%, -54%);
+    left: 75%;
     top: 54%;
 }
 
 #baseFour {
     width: 5%;
-    min-width: 80px;
+    min-width: 40px;
     max-width: 150px;
     position: absolute;
-    transform: translate(-85%, -80%);
-    left: 85%;
+    transform: translate(-75%, -80%);
+    left: 75%;
     top: 80%;
 }
 
@@ -117,7 +127,7 @@ body {
     animation: pulse 5s infinite;
 }
 
-#quit {
+#quit, #score {
   animation: jello 10s infinite;
 }
 
