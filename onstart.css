@@ -31,7 +31,7 @@ body {
 
 #baseOne, #playerOne {
     width: 5%;
-    min-width: 40px;
+    min-width: 60px;
     max-width: 150px;
     position: absolute;
     transform: translate(-75%, -10%);
@@ -42,7 +42,7 @@ body {
 
 #baseTwo, #playerTwo {
     width: 5%;
-    min-width: 40px;
+    min-width: 60px;
     max-width: 150px;
     position: absolute;
     transform: translate(-75%, -32%);
@@ -52,7 +52,7 @@ body {
 
 #baseThree, #playerThree {
     width: 5%;
-    min-width: 40px;
+    min-width: 60px;
     max-width: 150px;
     position: absolute;
     transform: translate(-75%, -54%);
@@ -62,7 +62,7 @@ body {
 
 #baseFour, #playerFour {
     width: 5%;
-    min-width: 40px;
+    min-width: 60px;
     max-width: 150px;
     position: absolute;
     transform: translate(-75%, -80%);
