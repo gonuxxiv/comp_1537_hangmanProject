@@ -5,9 +5,18 @@ body {
 
 #alphabet {
     width: 3%;
-    min-width: 30px;
+    min-width: 40px;
     max-width: 80px;
     max-height: 80px;
+}
+
+#quit {
+  width: 8%;
+  min-width: 100px;
+  max-width: 200px;
+  position: absolute;
+    right: 1%;
+    bottom: 1%;
 }
 
 #baseOne {
@@ -106,4 +115,8 @@ body {
 
 #alphabet {
     animation: pulse 5s infinite;
+}
+
+#quit {
+  animation: jello 10s infinite;
 }
