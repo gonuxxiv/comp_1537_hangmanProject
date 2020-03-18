@@ -29,7 +29,7 @@ body {
     top: 3%;
 }
 
-#baseOne {
+#baseOne, #playerOne {
     width: 5%;
     min-width: 40px;
     max-width: 150px;
@@ -39,7 +39,8 @@ body {
     top: 10%;
 }
 
-#baseTwo {
+
+#baseTwo, #playerTwo {
     width: 5%;
     min-width: 40px;
     max-width: 150px;
@@ -49,7 +50,7 @@ body {
     top: 32%;
 }
 
-#baseThree {
+#baseThree, #playerThree {
     width: 5%;
     min-width: 40px;
     max-width: 150px;
@@ -59,7 +60,7 @@ body {
     top: 54%;
 }
 
-#baseFour {
+#baseFour, #playerFour {
     width: 5%;
     min-width: 40px;
     max-width: 150px;
@@ -68,6 +69,35 @@ body {
     left: 75%;
     top: 80%;
 }
+
+
+@keyframes characterPulse {
+  0%
+  {
+    transform: scale( .90 ) rotate(-45deg);
+  }
+  20%
+  {
+    transform: scale( 1 ) rotate(-46deg);
+  }
+  40%
+  {
+    transform: scale( .90 ) rotate(-47deg)
+  }
+  60%
+  {
+    transform: scale( 1 ) rotate(-45deg)
+  }
+  80%
+  {
+    transform: scale( .90 ) rotate(-44deg)
+  }
+  100%
+  {
+    transform: scale( .90 ) rotate(-43deg);
+  }
+}
+
 
 @keyframes pulse {
         0%
@@ -111,20 +141,21 @@ body {
 
 }
 
+#playerOne, #playerTwo, #playerThree, #playerFour {
+  animation: characterPulse 1s infinite;
+}
+
 #baseOne, #baseTwo, #baseThree, #baseFour {
-    animation-name: pulse;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation: pulse 2s infinite;
 }
 
 #baseOne:hover, #baseTwo:hover, #baseThree:hover, #baseFour:hover {
-    animation: jello 0.5s;
-    animation-iteration-count: infinite;
+    animation: jello 0.5s infinite;
 }
 
 
 #alphabet {
-    animation: pulse 5s infinite;
+  animation: pulse 5s infinite;
 }
 
 #quit, #score {
