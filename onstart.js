@@ -36,7 +36,7 @@ function randomLocation () {
 }
 
 function addImage (imageName) {
-    let img = document.createElement('img');
+    let img = document.createElement("img");
     img.setAttribute("id", "alphabet")
     img.setAttribute("style", "position: absolute;");
     img.setAttribute("src", imageName)

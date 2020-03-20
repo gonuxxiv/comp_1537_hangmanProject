@@ -72,73 +72,82 @@ body {
 
 
 @keyframes characterPulse {
-  0%
-  {
+  0% {
     transform: scale( .90 ) rotate(-45deg);
   }
-  20%
-  {
+  20% {
     transform: scale( 1 ) rotate(-46deg);
   }
-  40%
-  {
+  40% {
     transform: scale( .90 ) rotate(-47deg)
   }
-  60%
-  {
+  60% {
     transform: scale( 1 ) rotate(-45deg)
   }
-  80%
-  {
+  80% {
     transform: scale( .90 ) rotate(-44deg)
   }
-  100%
-  {
+  100% {
     transform: scale( .90 ) rotate(-43deg);
   }
 }
 
 
 @keyframes pulse {
-        0%
-        {
-          transform: scale( .90 );
-        }
-        20%
-        {
-          transform: scale( 1 );
-        }
-        40%
-        {
-          transform: scale( .90 );
-        }
-        60%
-        {
-          transform: scale( 1 );
-        }
-        80%
-        {
-          transform: scale( .90 );
-        }
-        100%
-        {
-          transform: scale( .90 );
-        }
+  0% {
+    transform: scale( .90 );
+  }
+  20% {
+    transform: scale( 1 );
+  }
+  40% {
+    transform: scale( .90 );
+  }
+  60% {
+    transform: scale( 1 );
+  }
+  80% {
+    transform: scale( .90 );
+  }
+  100% {
+    transform: scale( .90 );
+  }
 }
 
 @keyframes jello {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -1px) rotate(-1deg); }
-    20% { transform: translate(-1px, 0px) rotate(1deg); }
-    30% { transform: translate(1px, 1px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 1px) rotate(-1deg); }
-    60% { transform: translate(-1px, 1px) rotate(0deg); }
-    70% { transform: translate(1px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 1px) rotate(0deg); }
-    100% { transform: translate(1px, -1px) rotate(-1deg); }
-
+  0% { 
+    transform: translate(1px, 1px) rotate(0deg); 
+  }
+  10% { 
+    transform: translate(-1px, -1px) rotate(-1deg); 
+  }
+  20% { 
+    transform: translate(-1px, 0px) rotate(1deg); 
+  }
+  30% { 
+    transform: translate(1px, 1px) rotate(0deg); 
+  }
+  40% { 
+    transform: translate(1px, -1px) rotate(1deg); 
+  }
+  50% { 
+    transform: translate(-1px, 1px) rotate(-1deg); 
+  }
+  60% { 
+    transform: translate(-1px, 1px) rotate(0deg); 
+  }
+  70% { 
+    transform: translate(1px, 1px) rotate(-1deg); 
+  }
+  80% { 
+    transform: translate(-1px, -1px) rotate(1deg); 
+  }
+  90% { 
+    transform: translate(1px, 1px) rotate(0deg); 
+  }
+  100% { 
+    transform: translate(1px, -1px) rotate(-1deg); 
+  }
 }
 
 #playerOne, #playerTwo, #playerThree, #playerFour {
