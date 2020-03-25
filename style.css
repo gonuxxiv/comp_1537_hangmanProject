@@ -12,12 +12,8 @@
     top: 40%;
 }
 
-body {
-    background-color: paleturquoise;
-}
-
-h1 {
+h1#blank {
     position: fixed;
     left: 40%;
-    font-size: 150px;
+    font-size: 100px;
 }

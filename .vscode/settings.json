@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f437dd1f-7dc0-43fe-9052-001a02fad6a7/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/hangmanProject",
+    "appService.deploySubpath": ""
+}

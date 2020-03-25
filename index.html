@@ -7,33 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Interactive Hangman</title>
     <link rel="stylesheet" type="text/css" href="onstart.css">
-    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 </head>
-<body id="body" onload="startGame(character)">
-    <h1>_ _ _ _ _</h1>
-    <div id="alphabets">
-        <img src="images/letterA.png" alt="A" id="letter">
+<body id="body">
+    <div>
+        <h2 id="title">The interactive hangman</h2>
+        <img src="images/start.png" alt="start" id="start" onclick="start()">
     </div>
-    <div id="base">
-        <img id="baseOne" src = "Images/base_player_one.png">
-           <img id="baseTwo" src = "Images/base_player_two.png">
-        <img id="baseThree" src = "Images/base_player_three.png">
-        <img id="baseFour" src = "Images/base_player_four.png">
-    </div>
-
-    <div id="players">
-        <img id="playerOne" src = "Images/player_one.png">
-           <img id="playerTwo" src = "Images/player_two.png">
-           <img id="playerThree" src = "Images/player_three.png">
-        <img id="playerFour" src = "Images/player_four.png">
-    </div>
-
-    <div id="interface">
-        <img id="score" src = "Images/score.png">
-        <img id="quit" src = "Images/quit.png">
-    </div>
-
-    <script src="script.js"></script>
-    <script src="onstart.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
