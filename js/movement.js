@@ -36,7 +36,7 @@ let alphabets = {
     move: function(letter) {
         document.addEventListener("keydown", function(e) {
             if (keys[90]) {
-                speed = 40;
+                // speed = 40;
                 if (keys[37]){  // move left
                     initiateLeft(letter);
                 }
@@ -55,7 +55,7 @@ let alphabets = {
             if(e.keyCode == 90) {
                 keys[e.keyCode]=false;
                 letter = null;
-                speed = 10;
+                // speed = 10;
                 grabbed = true;
             }
         })

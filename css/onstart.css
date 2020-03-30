@@ -1,7 +1,25 @@
 body {
-    background-image: url(images/background.png);
+    background-image: url(../images/background.png);
     background-repeat: repeat;
     background-color: paleturquoise;
+}
+
+h1#ready {
+  position: absolute;
+  font-size: 100px;
+  left: 48%;
+  margin-left: -150px;
+  top: 35%;
+  animation: pulse2 3s infinite;
+}
+
+h1#start {
+  position: absolute;
+  font-size: 150px;
+  left: 48%;
+  margin-left: -150px;
+  top: 30%;
+  animation: rainbow 2s infinite;
 }
 
 h2#title {
@@ -58,15 +76,33 @@ h1#scoreCount {
   top: 0%; */
 }
 
-#baseOne, #playerOne {
+/* #baseOne, #playerOne {
     width: 5%;
     min-width: 60px;
     max-width: 150px;
-    /* height: 130px; */
+    height: 130px;
     position: absolute;
     transform: translate(-75%, -10%);
     left: 75%;
     top: 10%;
+} */
+
+#playerOne {
+  width: 5%;
+  min-width: 60px;
+  max-width: 150px;
+  position: absolute;
+  transform: translate(-75%, -32%);
+  left: 80%;
+  top: 40%;
+}
+
+#baseOne {
+  width: 10%;
+  position: absolute;
+  transform: translate(-75%, -32%);
+  left: 78%;
+  top: 36%;
 }
 
 
@@ -156,6 +192,13 @@ h1#scoreCount {
         }
 }
 
+@keyframes pulse2 {
+  0% { transform: scale( .50 ); }
+  25% { transform: scale( 1 ); }
+  80% { transform: scale( 1 ); }
+  90% { transform: scale( 2 ); }
+}
+
 @keyframes jello {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -1px) rotate(-1deg); }
@@ -169,6 +212,30 @@ h1#scoreCount {
     90% { transform: translate(1px, 1px) rotate(0deg); }
     100% { transform: translate(1px, -1px) rotate(-1deg); }
 
+}
+
+@keyframes rainbow {
+  0% { transform: translate(1px, 1px) rotate(0deg); color: red;}
+  5% { transform: translate(-1px, -1px) rotate(-1deg); color: orange;}
+  10% { transform: translate(-1px, 0px) rotate(1deg); color: yellow;}
+  15% { transform: translate(1px, 1px) rotate(0deg); color: lightgreen;}
+  20% { transform: translate(1px, -1px) rotate(1deg); color: rgb(182, 225, 243);}
+  25% { transform: translate(-1px, 1px) rotate(-1deg); color: indigo;}
+  30% { transform: translate(-1px, 1px) rotate(0deg); color: violet;}
+  35% { transform: translate(1px, 1px) rotate(-1deg); color: red;}
+  40% { transform: translate(-1px, -1px) rotate(1deg); color: orange;}
+  45% { transform: translate(1px, 1px) rotate(0deg); color: yellow;}
+  50% { transform: translate(1px, -1px) rotate(-1deg); color: lightgreen;}
+  55% { transform: translate(1px, -1px) rotate(1deg); color: rgb(182, 225, 243);}
+  60% { transform: translate(-1px, 1px) rotate(-1deg); color: indigo;}
+  65% { transform: translate(-1px, 1px) rotate(0deg); color: violet;}
+  70% { transform: translate(1px, 1px) rotate(-1deg); color: red;}
+  75% { transform: translate(-1px, -1px) rotate(1deg); color: orange;}
+  80% { transform: translate(1px, 1px) rotate(0deg); color: yellow;}
+  85% { transform: translate(1px, -1px) rotate(-1deg); color: lightgreen;}
+  90% { transform: translate(1px, -1px) rotate(1deg); color: rgb(182, 225, 243);}
+  95% { transform: translate(-1px, 1px) rotate(-1deg); color: indigo;}
+  100% { transform: translate(-1px, 1px) rotate(0deg); color: violet;}
 }
 
 #playerOne, #playerTwo, #playerThree, #playerFour {
@@ -199,4 +266,5 @@ h1#scoreCount {
 #start:hover {
   animation: jello 1s infinite;
 }
+
 

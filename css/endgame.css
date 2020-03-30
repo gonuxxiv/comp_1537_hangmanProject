@@ -1,0 +1,118 @@
+h1#winGame {
+    position: absolute;
+    font-size: 150px;
+    left: 48%;
+    margin-left: -150px;
+    top: 30%;
+    animation: pulse 15s infinite;
+}
+
+h1#congratMessage {
+    position: absolute;
+    font-size: 90px;
+    left: 25%;
+    font-family: fantasy;
+    margin-left: -150px;
+    top: 20%;
+    animation: rainbow 5s infinite;
+}
+
+h1#message {
+    position: absolute;
+    font-size: 90px;
+    left: 43%;
+    font-family: fantasy;
+    margin-left: -150px;
+    top: 30%;
+    animation: rainbow 5s infinite;
+}
+
+img#confetti {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 100%;
+}
+
+img#sadFaces {
+    position: absolute;
+    left: 23%;
+    top: 40%;
+    width: 50%;
+    height: 40%;
+    z-index: -1;
+}
+
+img#playAgain {
+    position: absolute;
+    width: 300px;
+    left: 48%;
+    margin-left: -150px;
+    top: 60%;
+    animation: pulse 2s infinite;
+}
+
+img#playAgain2 {
+    position: absolute;
+    width: 300px;
+    left: 48%;
+    margin-left: -150px;
+    top: 45%;
+    animation: pulse 2s infinite;
+}
+
+#playAgain:hover {
+    animation: jello 1s infinite;
+}
+
+
+@keyframes pulse {
+    0%
+    {
+      transform: scale( .90 );
+    }
+    20%
+    {
+      transform: scale( 1 );
+    }
+    40%
+    {
+      transform: scale( .90 );
+    }
+    60%
+    {
+      transform: scale( 1 );
+    }
+    80%
+    {
+      transform: scale( .90 );
+    }
+    100%
+    {
+      transform: scale( .90 );
+    }
+}
+
+@keyframes rainbow {
+    0% { color: red;}
+    5% { color: orange;}
+    10% { color: yellow;}
+    15% { color: lightgreen;}
+    20% { color: rgb(182, 225, 243);}
+    25% { color: indigo;}
+    30% { color: violet;}
+    35% { color: red;}
+    40% { color: orange;}
+    45% { color: yellow;}
+    50% { color: lightgreen;}
+    55% { color: rgb(182, 225, 243);}
+    60% { color: indigo;}
+    65% { color: violet;}
+    70% { color: red;}
+    75% { color: orange;}
+    80% { color: yellow;}
+    85% { color: lightgreen;}
+    90% { color: rgb(182, 225, 243);}
+    95% { color: indigo;}
+    100% { color: violet;}
+  }
