@@ -1,0 +1,270 @@
+body {
+    background-image: url(../images/background.png);
+    background-repeat: repeat;
+    background-color: paleturquoise;
+}
+
+h1#ready {
+  position: absolute;
+  font-size: 100px;
+  left: 48%;
+  margin-left: -150px;
+  top: 35%;
+  animation: pulse2 3s infinite;
+}
+
+h1#start {
+  position: absolute;
+  font-size: 150px;
+  left: 48%;
+  margin-left: -150px;
+  top: 30%;
+  animation: rainbow 2s infinite;
+}
+
+h2#title {
+  position: absolute;
+  font: 400 100px/1.3 'Oleo Script', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+  left: 50%;
+  margin-left: -450px;
+}
+
+img#start {
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+}
+
+.alphabets {
+    width: 3%;
+    min-width: 40px;
+    max-width: 80px;
+    height: auto;
+    max-height: 80px;
+}
+
+#quit {
+  width: 8%;
+  min-width: 100px;
+  max-width: 200px;
+  position: absolute;
+  right: 5%;
+  bottom: 1%;
+}
+
+#score {
+  width: 8%;
+  min-width: 60px;
+  max-width: 200px;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+
+h1#scoreCount {
+  font-size: 60px;
+  position: absolute;
+  right: 2%;
+  top: 0%;
+  /* position: absolute;
+  font-size: 60px;
+  right: 3%;
+  top: 0%; */
+}
+
+/* #baseOne, #playerOne {
+    width: 5%;
+    min-width: 60px;
+    max-width: 150px;
+    height: 130px;
+    position: absolute;
+    transform: translate(-75%, -10%);
+    left: 75%;
+    top: 10%;
+} */
+
+#playerOne {
+  width: 5%;
+  min-width: 60px;
+  max-width: 150px;
+  position: absolute;
+  transform: translate(-75%, -32%);
+  left: 80%;
+  top: 40%;
+}
+
+#baseOne {
+  width: 10%;
+  position: absolute;
+  transform: translate(-75%, -32%);
+  left: 78%;
+  top: 36%;
+}
+
+
+#baseTwo, #playerTwo {
+    width: 5%;
+    min-width: 60px;
+    max-width: 150px;
+    position: absolute;
+    transform: translate(-75%, -32%);
+    left: 75%;
+    top: 32%;
+}
+
+#baseThree, #playerThree {
+    width: 5%;
+    min-width: 60px;
+    max-width: 150px;
+    position: absolute;
+    transform: translate(-75%, -54%);
+    left: 75%;
+    top: 54%;
+}
+
+#baseFour, #playerFour {
+    width: 5%;
+    min-width: 60px;
+    max-width: 150px;
+    position: absolute;
+    transform: translate(-75%, -80%);
+    left: 75%;
+    top: 80%;
+}
+
+
+@keyframes characterPulse {
+  0%
+  {
+    transform: scale( .90 ) rotate(-45deg);
+  }
+  20%
+  {
+    transform: scale( 1 ) rotate(-46deg);
+  }
+  40%
+  {
+    transform: scale( .90 ) rotate(-47deg)
+  }
+  60%
+  {
+    transform: scale( 1 ) rotate(-45deg)
+  }
+  80%
+  {
+    transform: scale( .90 ) rotate(-44deg)
+  }
+  100%
+  {
+    transform: scale( .90 ) rotate(-43deg);
+  }
+}
+
+
+@keyframes pulse {
+        0%
+        {
+          transform: scale( .90 );
+        }
+        20%
+        {
+          transform: scale( 1 );
+        }
+        40%
+        {
+          transform: scale( .90 );
+        }
+        60%
+        {
+          transform: scale( 1 );
+        }
+        80%
+        {
+          transform: scale( .90 );
+        }
+        100%
+        {
+          transform: scale( .90 );
+        }
+}
+
+@keyframes pulse2 {
+  0% { transform: scale( .50 ); }
+  25% { transform: scale( 1 ); }
+  80% { transform: scale( 1 ); }
+  90% { transform: scale( 2 ); }
+}
+
+@keyframes jello {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -1px) rotate(-1deg); }
+    20% { transform: translate(-1px, 0px) rotate(1deg); }
+    30% { transform: translate(1px, 1px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 1px) rotate(-1deg); }
+    60% { transform: translate(-1px, 1px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 1px) rotate(0deg); }
+    100% { transform: translate(1px, -1px) rotate(-1deg); }
+
+}
+
+@keyframes rainbow {
+  0% { transform: translate(1px, 1px) rotate(0deg); color: red;}
+  5% { transform: translate(-1px, -1px) rotate(-1deg); color: orange;}
+  10% { transform: translate(-1px, 0px) rotate(1deg); color: yellow;}
+  15% { transform: translate(1px, 1px) rotate(0deg); color: lightgreen;}
+  20% { transform: translate(1px, -1px) rotate(1deg); color: rgb(182, 225, 243);}
+  25% { transform: translate(-1px, 1px) rotate(-1deg); color: indigo;}
+  30% { transform: translate(-1px, 1px) rotate(0deg); color: violet;}
+  35% { transform: translate(1px, 1px) rotate(-1deg); color: red;}
+  40% { transform: translate(-1px, -1px) rotate(1deg); color: orange;}
+  45% { transform: translate(1px, 1px) rotate(0deg); color: yellow;}
+  50% { transform: translate(1px, -1px) rotate(-1deg); color: lightgreen;}
+  55% { transform: translate(1px, -1px) rotate(1deg); color: rgb(182, 225, 243);}
+  60% { transform: translate(-1px, 1px) rotate(-1deg); color: indigo;}
+  65% { transform: translate(-1px, 1px) rotate(0deg); color: violet;}
+  70% { transform: translate(1px, 1px) rotate(-1deg); color: red;}
+  75% { transform: translate(-1px, -1px) rotate(1deg); color: orange;}
+  80% { transform: translate(1px, 1px) rotate(0deg); color: yellow;}
+  85% { transform: translate(1px, -1px) rotate(-1deg); color: lightgreen;}
+  90% { transform: translate(1px, -1px) rotate(1deg); color: rgb(182, 225, 243);}
+  95% { transform: translate(-1px, 1px) rotate(-1deg); color: indigo;}
+  100% { transform: translate(-1px, 1px) rotate(0deg); color: violet;}
+}
+
+#playerOne, #playerTwo, #playerThree, #playerFour {
+  animation: characterPulse 1s infinite;
+}
+
+#baseOne, #baseTwo, #baseThree, #baseFour {
+    animation: pulse 2s infinite;
+}
+
+#baseOne:hover, #baseTwo:hover, #baseThree:hover, #baseFour:hover {
+    animation: jello 0.5s infinite;
+}
+
+
+#alphabet {
+  animation: pulse 5s infinite;
+}
+
+#quit, #score {
+  animation: jello 10s infinite;
+}
+
+#quit:hover {
+  animation: jello 1s infinite;
+}
+
+#start:hover {
+  animation: jello 1s infinite;
+}
+
+

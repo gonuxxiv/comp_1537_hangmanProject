@@ -1,0 +1,25 @@
+#char1 {
+    width: 5%;
+    position: absolute;
+    left: 94%;
+    top: 40%;
+}
+
+#letter {
+    width: 200px;
+    position: absolute;
+    left: 5%;
+    top: 40%;
+}
+
+
+
+h1#blank {
+    text-align: center;
+    font-size: 100px;
+}
+
+h1#correctLetters {
+    text-align: center;
+    font-size: 100px;
+}
