@@ -1,7 +1,7 @@
 body {
     background-image: url(../images/background.png);
     background-repeat: repeat;
-    background-color: paleturquoise;
+    background-color: rgb(223, 255, 241)
 }
 
 h1#ready {
@@ -88,17 +88,18 @@ h1#scoreCount {
 } */
 
 #playerOne {
-  width: 5%;
-  min-width: 60px;
+  width: 8%;
+  min-width: 100px;
   max-width: 150px;
   position: absolute;
   transform: translate(-75%, -32%);
-  left: 80%;
+  left: 78%;
   top: 40%;
 }
 
 #baseOne {
   width: 10%;
+  min-width: 100px;
   position: absolute;
   transform: translate(-75%, -32%);
   left: 78%;
@@ -138,58 +139,22 @@ h1#scoreCount {
 
 
 @keyframes characterPulse {
-  0%
-  {
-    transform: scale( .90 ) rotate(-45deg);
-  }
-  20%
-  {
-    transform: scale( 1 ) rotate(-46deg);
-  }
-  40%
-  {
-    transform: scale( .90 ) rotate(-47deg)
-  }
-  60%
-  {
-    transform: scale( 1 ) rotate(-45deg)
-  }
-  80%
-  {
-    transform: scale( .90 ) rotate(-44deg)
-  }
-  100%
-  {
-    transform: scale( .90 ) rotate(-43deg);
-  }
+  0% {transform: scale( .90 ) rotate(0deg);}
+  20% {transform: scale( 1 ) rotate(4deg);}
+  40% {transform: scale( .90 ) rotate(0deg)}
+  60% {transform: scale( 1 ) rotate(-4deg)}
+  80% {transform: scale( .90 ) rotate(0deg)}
+  100% {transform: scale( .90 ) rotate(0deg);}
 }
 
 
 @keyframes pulse {
-        0%
-        {
-          transform: scale( .90 );
-        }
-        20%
-        {
-          transform: scale( 1 );
-        }
-        40%
-        {
-          transform: scale( .90 );
-        }
-        60%
-        {
-          transform: scale( 1 );
-        }
-        80%
-        {
-          transform: scale( .90 );
-        }
-        100%
-        {
-          transform: scale( .90 );
-        }
+        0% {transform: scale( .90 );}
+        20% {transform: scale( 1 );}
+        40% {transform: scale( .90 );}
+        60% {transform: scale( 1 );}
+        80% {transform: scale( .90 );}
+        100% {transform: scale( .90 );}
 }
 
 @keyframes pulse2 {
