@@ -4,8 +4,7 @@ let y = character.offsetTop;
 let width = window.innerWidth;
 let height = window.innerHeight;
 let grabbed = true;
-let speed = 10;
-// let alphabet = document.getElementsByClassName('alphabets');
+let speed = 8;
 
 let alphabets = {
     0: document.getElementById('a'),
@@ -37,7 +36,7 @@ let alphabets = {
     move: function(letter) {
         document.addEventListener("keydown", function(e) {
             if (keys[90]) {
-                speed = 70;
+                speed = 40;
                 if (keys[37]){  // move left
                     initiateLeft(letter);
                 }
@@ -151,7 +150,7 @@ function moveRight(char) {
     char.style.left = (x + 'px')
     x += 1;
     let motion = setTimeout(function() {
-        if(char.offsetLeft < width - 170) {
+        if(char.offsetLeft < width - 100) {
             initiateRight(char);
         }
     }, speed)
@@ -164,7 +163,7 @@ function moveDown(char) {
     char.style.top = (y + 'px')
     y += 4;
     let motion = setTimeout(function() {
-        if(char.offsetTop < height - 180) {
+        if(char.offsetTop < height - 100) {
             initiateDown(char);
         }
     }, speed)

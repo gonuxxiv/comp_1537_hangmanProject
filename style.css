@@ -12,8 +12,14 @@
     top: 40%;
 }
 
+
+
 h1#blank {
-    position: fixed;
-    left: 40%;
+    text-align: center;
+    font-size: 100px;
+}
+
+h1#correctLetters {
+    text-align: center;
     font-size: 100px;
 }

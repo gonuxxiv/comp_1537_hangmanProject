@@ -48,10 +48,14 @@ img#start {
 }
 
 h1#scoreCount {
+  font-size: 60px;
   position: absolute;
+  right: 2%;
+  top: 0%;
+  /* position: absolute;
   font-size: 60px;
   right: 3%;
-  top: 0%;
+  top: 0%; */
 }
 
 #baseOne, #playerOne {

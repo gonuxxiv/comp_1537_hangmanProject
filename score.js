@@ -17,6 +17,7 @@ function retrieved() {
     }
 }
 
+
 function earnScore(letter) {
     letter.style.display = 'none';
     score.innerHTML = i;
