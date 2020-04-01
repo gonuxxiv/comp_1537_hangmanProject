@@ -66,8 +66,8 @@ let alphabets = {
 
 function depriveLetters() {
     for(let i = 0; i < 26; i++) {
-        if ((alphabets[i].offsetTop + 50) > (character.offsetTop + 80) && (character.offsetTop + 80) > (alphabets[i].offsetTop - 50)  
-        && (alphabets[i].offsetLeft + 50) > character.offsetLeft && character.offsetLeft > (alphabets[i].offsetLeft - 50)) {
+        if ((alphabets[i].offsetTop + 25) > (character.offsetTop + 40) && (character.offsetTop + 40) > (alphabets[i].offsetTop - 25)  
+        && (alphabets[i].offsetLeft + 25) > character.offsetLeft && character.offsetLeft > (alphabets[i].offsetLeft - 25)) {
             if (keys[90] && grabbed) {
                 sfx.play();
                 alphabets.move(alphabets[i])

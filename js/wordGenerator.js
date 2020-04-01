@@ -14,7 +14,6 @@ let gameMusic = new Audio("../audios/gameplay.mp3");
 
 function generateWord() {
     let randnum = Math.floor(Math.random() * (wordsList.length))
-    console.log(randnum)
     let randomWord = wordsList[randnum];
     let h1 = document.createElement('h1');
     let text = '';
@@ -34,7 +33,6 @@ document.addEventListener("keyup", function(e) {
 })
 
 function checkBase() {
-    console.log(guessWord)
     let letters = {
         0: document.getElementById('a'),
         1: document.getElementById('b'),
@@ -78,7 +76,6 @@ function checkLetter(letter, word) {
     let isLetter = false;
     for(let i = 0; i < word.length; i++) {
         if(word[i] == guessedLetter) {
-            // earnScore();
             displayLetter(guessedLetter, word);
             isLetter = true;
         } 
@@ -88,11 +85,6 @@ function checkLetter(letter, word) {
         loseScore();
     }
 }
-
-// function earnScore() {
-//     score++;
-//     scoreBoard.innerHTML = score;
-// }
 
 function loseScore() {
     hangman();
@@ -230,5 +222,10 @@ function gameLost() {
     document.body.appendChild(message);
     document.body.appendChild(playAgainButton);
     document.body.appendChild(sadFaces);
-    // h1.id = 'winGame';
 }
+
+
+// function earnScore() {
+//     score++;
+//     scoreBoard.innerHTML = score;
+// }

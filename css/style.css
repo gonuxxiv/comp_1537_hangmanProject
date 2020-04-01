@@ -15,8 +15,8 @@
 h1#blank {
     position: absolute;
     left: 36%;
-    top: 9%;
-    font-size: 90px;
+    top: 10%;
+    font-size: 3vw;
     font-family: Kalam;
     z-index: 1;
     color: white;
@@ -24,9 +24,9 @@ h1#blank {
 
 h1#timeCount {
     position: absolute;
-    left: 53%;
+    left: 52%;
     top: -2%;
-    font-size: 90px;
+    font-size: 3vw;
     font-family: Kalam;
     z-index: 1;
     color: white;
@@ -38,10 +38,12 @@ h1#correctLetters {
 }
 
 img#scoreBoard {
-    position: relative;
-    height: 350px;
-    min-width: 920px;
+    position: absolute;
     left: 33%;
+    height: 26%;
+    max-height: 26%;
+    width: 37%;
+    max-width: 37%;
     margin-top: -1%;  
     z-index: -1;  
 }
@@ -51,10 +53,11 @@ img#hangman {
     top: 2%;
     left: 35%;
     height: 14%;
+    max-height: 14%;
 }
 
-div#guessingWord {
+/* div#guessingWord {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+} */

@@ -28,14 +28,15 @@ h2#title {
   color: #FFFAFA;
   -webkit-text-stroke: 3px #2b2b2b;
   left: 52%;
+  top: 0%;
   margin-left: -450px;
 }
 
 img#start {
   position: absolute;
-  width: 300px;
-  left: 50%;
-  margin-left: -150px;
+  width: 12%;
+  max-width: 12%;
+  left: 45%;
   top: 50%;
 }
 
