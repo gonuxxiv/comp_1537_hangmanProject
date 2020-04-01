@@ -36,7 +36,10 @@ function readyStart() {
         h1.id = "start";
         h1.innerHTML = "Start!"
         setTimeout(function() { 
-            let scriptFiles = ["../js/onstart.js", "../js/wordGenerator.js", "../js/movement.js", "../js/score.js"]
+            let scriptFiles = ["../js/onstart.js", "../js/wordGenerator.js", "../js/movement.js"]
+            let hangmanImg = document.createElement('img');
+            let scoreBoard = document.createElement('img');
+            let scoreDiv = document.getElementById('guessingWord');
             h1.innerHTML = ""; 
             for(let i = 0; i < scriptFiles.length; i++) {
                 let script = document.createElement('script');
@@ -44,22 +47,15 @@ function readyStart() {
                 script.id = i;
                 document.body.appendChild(script);
             }
+            hangmanImg.src = "../images/hangman.jpg";
+            hangmanImg.id = "hangman";
+            scoreBoard.src = "../images/chalkboard.png";
+            scoreBoard.id = "scoreBoard";
+            scoreDiv.appendChild(hangmanImg);
+            scoreDiv.appendChild(scoreBoard);
         }, 1000)
     }, 3000)
     h1.innerHTML = startText + countDown;
-    document.body.appendChild(h1);
-}
-
-function inGameTimeCount() {
-    let h1 = document.createElement('h1');
-    let initialCount = 30;
-    let time = setInterval(function() {
-        initialCount -= 1;
-        h1.innerHTML = "";
-        h1.innerHTML = initialCount;
-    }, 1000)
-    setTimeout(function(){ clearInterval(time) }, 31000)
-    h1.innerHTML = initialCount;
     document.body.appendChild(h1);
 }
 

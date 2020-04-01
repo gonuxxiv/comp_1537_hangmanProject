@@ -7,15 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Interactive Hangman</title>
     <link rel="stylesheet" type="text/css" href="../css/onstart.css">
-    <link rel="stylesheet" type="text/css" href="../css/endgame.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 </head>
 <body id="body">
-    <div>
-        <h1 id="message">You've lost... :(</h1>
-        <img src="../images/play_again.png" id='playAgain2'>
-        <img src="../images/gamelost.gif" id='sadFaces'>
+    <div id="guessingWord">
+        <img src="../images/chalkboard.png" alt="chalkboard" id="scoreBoard">
+        <h1 id="blank">Babysitter</h1>
+        <img src="../images/hangman.jpg" id="hangman">
     </div>
-    <script src="../js/main.js"></script>
+    <div id="base">
+        <img id="baseOne" src = "../images/base_player_one.png">
+           <!-- <img id="baseTwo" src = "Images/base_player_two.png">
+        <img id="baseThree" src = "Images/base_player_three.png">
+        <img id="baseFour" src = "Images/base_player_four.png"> -->
+    </div>
+
+    <div id="players">
+        <img id="playerOne" src = "../images/player_one.png">
+           <!-- <img id="playerTwo" src = "Images/player_two.png">
+           <img id="playerThree" src = "Images/player_three.png">
+        <img id="playerFour" src = "Images/player_four.png"> -->
+    </div>
+
+    <div id="interface">
+        <!-- <img id="score" src = "../images/score.png">
+        <h1 id="scoreCount">0</h1> -->
+        <img id="quit" src = "../images/quit.png" onclick="quit()">
+    </div>
+    <img src="../images/confetti.gif" id="confetti">
 </body>
 </html>

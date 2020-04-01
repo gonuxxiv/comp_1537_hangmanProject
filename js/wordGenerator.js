@@ -1,12 +1,21 @@
-let wordsList = ["half", "cardboard", "oar", "babysitter", "drip", "shampoo", 'point', 'time machine']
+let wordsList = ["half", "cardboard", "oar", "babysitter", "drip", "shampoo", 'point', 'century', 'vision', 'kilogram', 'matrix', 'gaussian',
+                'logarithm', 'algebra', 'inverse', 'anonymous', 'constructor', 'closure', 'hoisting', 'mutation', 'vanilla', 'sentinel', 'landfill',
+                'web', 'development', 'blacksmith', 'quarantine', 'social', 'distance', 'false', 'true', 'class', 'finally', 'lambda', 'raise', 'global',
+                'return', 'continue', 'function', 'break', 'blizzard', 'javascript', 'python', 'avenue', 'voodoo', 'pajama', 'hertz']
 let div = document.getElementById('guessingWord');
 let guessWord = generateWord();
 let score = 0;
-let chance = 2;
+let chance = 0;
 let scoreBoard = document.getElementById('scoreCount');
+let reset = false;
+let gameover = false;
+let initialCount = 30;
+let gameMusic = new Audio("../audios/gameplay.mp3");
 
 function generateWord() {
-    let randomWord = wordsList[Math.floor(Math.random() * (wordsList.length - 1))];
+    let randnum = Math.floor(Math.random() * (wordsList.length))
+    console.log(randnum)
+    let randomWord = wordsList[randnum];
     let h1 = document.createElement('h1');
     let text = '';
     h1.id = 'blank'
@@ -57,6 +66,7 @@ function checkBase() {
     for(let i = 0; i < 26; i++) {
         if (letters[i].offsetTop > baseOne.offsetTop && (baseOne.offsetTop + 200) > letters[i].offsetTop  
         && letters[i].offsetLeft > baseOne.offsetLeft && (baseOne.offsetLeft + 200) > letters[i].offsetLeft) {
+            reset = true;
             checkLetter(letters[i], guessWord);
         }
     }
@@ -68,7 +78,7 @@ function checkLetter(letter, word) {
     let isLetter = false;
     for(let i = 0; i < word.length; i++) {
         if(word[i] == guessedLetter) {
-            earnScore();
+            // earnScore();
             displayLetter(guessedLetter, word);
             isLetter = true;
         } 
@@ -79,16 +89,25 @@ function checkLetter(letter, word) {
     }
 }
 
-function earnScore() {
-    score++;
-    scoreBoard.innerHTML = score;
-}
+// function earnScore() {
+//     score++;
+//     scoreBoard.innerHTML = score;
+// }
 
 function loseScore() {
-    chance--;
-    if (chance == 0) {
+    hangman();
+    chance++;
+    if (chance == 6) {
         gameLost();
     }
+}
+
+function hangman() {
+    let hangmanSrc = ["../images/hangman_head.jpg", "../images/hangman_body.jpg", "../images/hangman_rightarm.jpg", "../images/hangman_leftarm.jpg",
+                    "../images/hangman_rightleg.jpg", "../images/hangman_full.jpg"]
+    let hangman = document.getElementById('hangman');
+    hangman.src = hangmanSrc[chance];
+
 }
 
 function displayLetter(guessedLetter, word) {
@@ -126,10 +145,43 @@ function displayLetter(guessedLetter, word) {
     }
 }
 
+
+function inGameTimeCount() {
+    let h1 = document.createElement('h1');
+    h1.id = "timeCount";
+    let time = setInterval(function() {
+        initialCount -= 1;
+        h1.innerHTML = "";
+        h1.innerHTML = "time: " + initialCount;
+        if(gameover) {
+            clearInterval(time);
+            document.body.removeChild(h1);
+        }
+        if(reset) {
+            clearInterval(time);
+            reset = false;
+            initialCount = 30;
+            document.body.removeChild(h1);
+            inGameTimeCount();
+        }
+    }, 1000)
+    h1.innerHTML = "time: " + initialCount;
+    document.body.appendChild(h1);
+
+    setTimeout(function(){ 
+        clearInterval(time);
+        document.body.removeChild(h1);
+        gameLost(); }, 31000)
+}
+
+inGameTimeCount();
+
 function winGame(h1){
+    gameover = true;
     let letterImages = document.getElementsByClassName('alphabets');
     let playerOne = document.getElementById('playerOne');
     let baseOne = document.getElementById('baseOne');
+    let time = document.getElementById('timeCount');
     let confetti = document.createElement('img');
     let playAgainButton = document.createElement('img');
     let congratMessage = document.createElement('h1');
@@ -145,6 +197,7 @@ function winGame(h1){
     playAgainButton.src = "../images/play_again.png";
     playAgainButton.id = 'playAgain';
     playAgainButton.setAttribute('onclick', 'start()')
+    time.style.display = 'none';
     document.body.appendChild(confetti);
     document.body.appendChild(congratMessage);
     document.body.appendChild(playAgainButton);
@@ -153,6 +206,7 @@ function winGame(h1){
 
 function gameLost() {
     console.log('game lost')
+    gameover = true;
     let letterImages = document.getElementsByClassName('alphabets');
     let playerOne = document.getElementById('playerOne');
     let baseOne = document.getElementById('baseOne');

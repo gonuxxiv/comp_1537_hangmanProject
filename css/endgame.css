@@ -1,7 +1,8 @@
 h1#winGame {
-    position: absolute;
+    position: fixed;
     font-size: 150px;
-    left: 48%;
+    font-family: Kalam;
+    left: 45%;
     margin-left: -150px;
     top: 30%;
     animation: pulse 15s infinite;
@@ -28,10 +29,11 @@ h1#message {
 }
 
 img#confetti {
-    position: absolute;
-    left: 20%;
+    position: fixed;
+    left: 19%;
     width: 60%;
     height: 100%;
+    top: -1%;
 }
 
 img#sadFaces {

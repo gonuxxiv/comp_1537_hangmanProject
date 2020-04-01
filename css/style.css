@@ -12,14 +12,49 @@
     top: 40%;
 }
 
-
-
 h1#blank {
-    text-align: center;
-    font-size: 100px;
+    position: absolute;
+    left: 36%;
+    top: 9%;
+    font-size: 90px;
+    font-family: Kalam;
+    z-index: 1;
+    color: white;
+}
+
+h1#timeCount {
+    position: absolute;
+    left: 53%;
+    top: -2%;
+    font-size: 90px;
+    font-family: Kalam;
+    z-index: 1;
+    color: white;
 }
 
 h1#correctLetters {
     text-align: center;
     font-size: 100px;
+}
+
+img#scoreBoard {
+    position: relative;
+    height: 350px;
+    min-width: 920px;
+    left: 33%;
+    margin-top: -1%;  
+    z-index: -1;  
+}
+
+img#hangman {
+    position: fixed;
+    top: 2%;
+    left: 35%;
+    height: 14%;
+}
+
+div#guessingWord {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
