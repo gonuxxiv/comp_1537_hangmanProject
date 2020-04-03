@@ -1,0 +1,57 @@
+#char1 {
+    width: 5%;
+    position: absolute;
+    left: 94%;
+    top: 40%;
+}
+
+#letter {
+    width: 200px;
+    position: absolute;
+    left: 5%;
+    top: 40%;
+}
+
+h1#blank {
+    position: absolute;
+    left: 36%;
+    top: 10%;
+    font-size: 3vw;
+    font-family: Kalam;
+    z-index: 1;
+    color: white;
+}
+
+h1#timeCount {
+    position: absolute;
+    left: 52%;
+    top: -2%;
+    font-size: 3vw;
+    font-family: Kalam;
+    z-index: 1;
+    color: white;
+}
+
+h1#correctLetters {
+    text-align: center;
+    font-size: 100px;
+}
+
+img#scoreBoard {
+    position: absolute;
+    left: 33%;
+    height: 26%;
+    max-height: 26%;
+    width: 37%;
+    max-width: 37%;
+    margin-top: -1%;  
+    z-index: -1;  
+}
+
+img#hangman {
+    position: fixed;
+    top: 2%;
+    left: 35%;
+    height: 14%;
+    max-height: 14%;
+}

@@ -1,27 +1,18 @@
-let word = "hello";
-
-function randomLetters (word) {
-    let characters = word.length;
-    for (var i = 0; i < characters; i++) {
-        let result = word.charAt(i)
-        image(result)
-    }
-}
-
+// -----------Display letters in random locations----------- //
 function randomAlphabet () {
     let alphabet = "abcdefghijklmnopqrstuvwxyz"
-    for (var i = 0; i < alphabet.length; i++) {
-        let result = alphabet.charAt(Math.floor(Math.random() * 26));
+    for (let i = 0; i < 26; i++) {
+        let result = alphabet[i];
         image(result)
     }
 }
 
 function image (result) {
-    let folder = "Images/";
+    let folder = "../images/";
     let fileType = ".png";
 
     let imageName = folder + result + fileType
-    addImage(imageName)
+    addImage(imageName, result)
 } 
 
 
@@ -35,9 +26,11 @@ function randomLocation () {
     return [randomX, randomY]
 }
 
-function addImage (imageName) {
-    let img = document.createElement("img");
-    img.setAttribute("id", "alphabet")
+
+function addImage (imageName, result) {
+    let img = document.createElement('img');
+    img.setAttribute("id", result);
+    img.setAttribute("class", "alphabets")
     img.setAttribute("style", "position: absolute;");
     img.setAttribute("src", imageName)
     
@@ -48,7 +41,5 @@ function addImage (imageName) {
     document.getElementById("body").appendChild(img);
 }
 
-
-
-randomLetters(word)
 randomAlphabet()
+// ------------------------------------------------------------------------------------------------------------------- //

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Group E2 The Interactive Hangman Project by Linda Nguyen, Geun Uoo Kim -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Interactive Hangman</title>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="../css/onstart.css">
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel='stylesheet' type='text/css' href='../css/endgame.css'>
+</head>
+<audio autoplay>
+    <source src="../audios/game_play.mp3" type="audio/mp3">
+</audio> 
+<body id="body" onload="readyStart()">
+    <div id="guessingWord">
+    </div>
+    <div id="base">
+        <img id="baseOne" src = "../images/base_player_one.png">
+    </div>
+
+    <div id="players">
+        <img id="playerOne" src = "../images/player_one.png">
+    </div>
+
+    <div id="interface">
+        <img id="quit" src = "../images/quit.png" onclick="quit()">
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>
