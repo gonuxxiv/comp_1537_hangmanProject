@@ -38,7 +38,7 @@ function readyStart() {
         h1.id = "start";
         h1.innerHTML = "Start!"
         setTimeout(function() { 
-            let scriptFiles = ["../js/onstart.js", "../js/wordGenerator.js", "../js/movement.js"]
+            let scriptFiles = ["../js/onstart.js", "../js/gameplay.js", "../js/movement.js"]
             let hangmanImg = document.createElement('img');
             let scoreBoard = document.createElement('img');
             let scoreDiv = document.getElementById('guessingWord');
