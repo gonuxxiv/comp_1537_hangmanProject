@@ -6,7 +6,7 @@ let quitAudio = new Audio("../audios/quit.mp3");
 quitAudio.volume = 0.3;
 
 
-
+// -----------Start-Quit Sequence----------- //
 function start() {
     startAudio.play();
     setTimeout(function() { 
@@ -20,7 +20,9 @@ function quit() {
         quitAudio.load();
         window.location.href = "index.html"; }, 800)
 }
+// ------------------------------------------------------------------------------------------------------------------- //
 
+// -----------Ready Time Count Sequence----------- //
 function readyStart() {
     let h1 = document.createElement('h1')
     h1.id = "ready";
@@ -58,4 +60,4 @@ function readyStart() {
     h1.innerHTML = startText + countDown;
     document.body.appendChild(h1);
 }
-
+// ------------------------------------------------------------------------------------------------------------------- //

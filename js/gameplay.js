@@ -12,13 +12,14 @@ let gameover = false;
 let initialCount = 30;
 let gameMusic = new Audio("../audios/gameplay.mp3");
 
+
+// Get random word to guess
 function generateWord() {
-    let randnum = Math.floor(Math.random() * (wordsList.length))
-    let randomWord = wordsList[randnum];
+    let randomWord = wordsList[Math.floor(Math.random() * (wordsList.length))];  // draw a random word from the list
     let h1 = document.createElement('h1');
     let text = '';
     h1.id = 'blank'
-    for (let i = 0; i < randomWord.length; i++) {
+    for (let i = 0; i < randomWord.length; i++) {  // Substitute each letter of the word to a blank underscore
         text += '_ '
     }
     h1.innerHTML = text;
@@ -27,11 +28,12 @@ function generateWord() {
 }
 
 document.addEventListener("keyup", function(e) {
-    if (e.keyCode == 90) {
-        checkBase();
+    if (e.keyCode == 90) {  
+        checkBase();  
     }
 })
 
+// -----------Identify the letter the player has brought back----------- //
 function checkBase() {
     let letters = {
         0: document.getElementById('a'),
@@ -85,23 +87,9 @@ function checkLetter(letter, word) {
         loseScore();
     }
 }
+// ------------------------------------------------------------------------------------------------------------------- //
 
-function loseScore() {
-    hangman();
-    chance++;
-    if (chance == 6) {
-        gameLost();
-    }
-}
-
-function hangman() {
-    let hangmanSrc = ["../images/hangman_head.jpg", "../images/hangman_body.jpg", "../images/hangman_rightarm.jpg", "../images/hangman_leftarm.jpg",
-                    "../images/hangman_rightleg.jpg", "../images/hangman_full.jpg"]
-    let hangman = document.getElementById('hangman');
-    hangman.src = hangmanSrc[chance];
-
-}
-
+// -----------If the player has brought back a correct letter----------- //
 function displayLetter(guessedLetter, word) {
     let h1 = document.getElementById('blank');
     let h1WithSpace = h1.textContent;
@@ -136,9 +124,26 @@ function displayLetter(guessedLetter, word) {
         h1.innerHTML = text;
     }
 }
+// ------------------------------------------------------------------------------------------------------------------- //
+
+// -----------Either if player brings wrong letter or goes over time limit----------- //
+function loseScore() {
+    hangman();
+    chance++;
+    if (chance == 6) {
+        gameLost();
+    }
+}
+
+function hangman() {  // change hangman image
+    let hangmanSrc = ["../images/hangman_head.jpg", "../images/hangman_body.jpg", "../images/hangman_rightarm.jpg", "../images/hangman_leftarm.jpg",
+                    "../images/hangman_rightleg.jpg", "../images/hangman_full.jpg"]
+    let hangman = document.getElementById('hangman');
+    hangman.src = hangmanSrc[chance];
+}
 
 
-function inGameTimeCount() {
+function inGameTimeCount() {  // counts time
     let h1 = document.createElement('h1');
     h1.id = "timeCount";
     let time = setInterval(function() {
@@ -167,7 +172,10 @@ function inGameTimeCount() {
 }
 
 inGameTimeCount();
+// ------------------------------------------------------------------------------------------------------------------- //
 
+
+// -----------Win-Lose Sequence----------- //
 function winGame(h1){
     gameover = true;
     let letterImages = document.getElementsByClassName('alphabets');
@@ -223,9 +231,4 @@ function gameLost() {
     document.body.appendChild(playAgainButton);
     document.body.appendChild(sadFaces);
 }
-
-
-// function earnScore() {
-//     score++;
-//     scoreBoard.innerHTML = score;
-// }
+// ------------------------------------------------------------------------------------------------------------------- //

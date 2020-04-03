@@ -1,3 +1,4 @@
+// -----------Display letters in random locations----------- //
 function randomAlphabet () {
     let alphabet = "abcdefghijklmnopqrstuvwxyz"
     for (let i = 0; i < 26; i++) {
@@ -40,5 +41,5 @@ function addImage (imageName, result) {
     document.getElementById("body").appendChild(img);
 }
 
-
 randomAlphabet()
+// ------------------------------------------------------------------------------------------------------------------- //

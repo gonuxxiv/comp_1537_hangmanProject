@@ -5,9 +5,12 @@ let width = window.innerWidth;
 let height = window.innerHeight;
 let grabbed = true;
 let speed = 8;
+let pencilTipLeft = null;
+let pencilTipRight = null;
 let sfx = new Audio("../audios/sfx_grab.mp3");
 sfx.volume = 0.8;
 
+// -----------Letter Grab Functions----------- //
 let alphabets = {
     0: document.getElementById('a'),
     1: document.getElementById('b'),
@@ -66,8 +69,8 @@ let alphabets = {
 
 function depriveLetters() {
     for(let i = 0; i < 26; i++) {
-        if ((alphabets[i].offsetTop + 25) > (character.offsetTop + 40) && (character.offsetTop + 40) > (alphabets[i].offsetTop - 25)  
-        && (alphabets[i].offsetLeft + 25) > character.offsetLeft && character.offsetLeft > (alphabets[i].offsetLeft - 25)) {
+        if ((alphabets[i].offsetTop + 25) > (character.offsetTop + pencilTipLeft) && (character.offsetTop + pencilTipLeft) > (alphabets[i].offsetTop - 25)  
+        && (alphabets[i].offsetLeft + 25) > (character.offsetLeft + pencilTipRight) && (character.offsetLeft + pencilTipRight) > (alphabets[i].offsetLeft - 25)) {
             if (keys[90] && grabbed) {
                 sfx.play();
                 alphabets.move(alphabets[i])
@@ -76,12 +79,16 @@ function depriveLetters() {
         }
     }
 }
+// ------------------------------------------------------------------------------------------------------------------- //
 
+// -----------Movement Functions----------- //
 let keys = {}
 document.addEventListener("keydown", function (e) {
     keys[e.keyCode] = true;
     if (keys[37]){  // move left
         character.style.transform = "scaleX(-1)";
+        pencilTipRight = 0;
+        pencilTipLeft = 45;
         initiateLeft(character);
     }
     if (keys[38]){  // move up
@@ -92,6 +99,7 @@ document.addEventListener("keydown", function (e) {
     if (keys[39]){  // move right
         if(character.offsetLeft < width - 170) {
             character.style.transform = "scaleX(1)";
+            pencilTipRight = 80;
             initiateRight(character);
         }
     }
@@ -176,3 +184,4 @@ function moveDown(char) {
         clearTimeout(motion)
     }
 }
+// ------------------------------------------------------------------------------------------------------------------- //
