@@ -4,6 +4,16 @@ body {
     background-color: rgb(223, 246, 241)
 }
 
+div#instruction {
+  position: absolute;
+  top: 23%;
+  left: 35%;
+  text-align: center;
+  color: #2b2b2b;
+  -webkit-text-stroke: 0.5px #FFFAFA;
+  font: 400 1vw 'Oleo Script', Helvetica, sans-serif;
+}
+
 h1#ready {
   position: absolute;
   font-size: 100px;

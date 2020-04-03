@@ -34,6 +34,7 @@ document.addEventListener("keyup", function(e) {
 })
 
 // -----------Identify the letter the player has brought back----------- //
+// Accept the letter when it gets dropped on the base
 function checkBase() {
     let letters = {
         0: document.getElementById('a'),
@@ -72,6 +73,7 @@ function checkBase() {
     }
 }
 
+// Verify the letter
 function checkLetter(letter, word) {
     letter.style.display = 'none';
     let guessedLetter = letter.id;
@@ -90,6 +92,7 @@ function checkLetter(letter, word) {
 // ------------------------------------------------------------------------------------------------------------------- //
 
 // -----------If the player has brought back a correct letter----------- //
+// display letter on screen
 function displayLetter(guessedLetter, word) {
     let h1 = document.getElementById('blank');
     let h1WithSpace = h1.textContent;
@@ -204,6 +207,7 @@ function winGame(h1){
     h1.id = 'winGame';
 }
 
+// When lost
 function gameLost() {
     console.log('game lost')
     gameover = true;
